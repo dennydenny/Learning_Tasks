@@ -1,0 +1,6 @@
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task3\Task3\bin\Debug\Task3.exe
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task3\Task3\bin\Debug\Task3.pdb
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task3\Task3\obj\x86\Debug\Task3.exe
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task3\Task3\obj\x86\Debug\Task3.pdb
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task1\Task3\Task3\obj\x86\Debug\Task3.exe
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task1\Task3\Task3\obj\x86\Debug\Task3.pdb

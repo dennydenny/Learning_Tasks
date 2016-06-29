@@ -1,0 +1,4 @@
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task1\Task5\bin\Debug\Task5.exe
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task1\Task5\bin\Debug\Task5.pdb
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task1\Task5\obj\x86\Debug\Task5.exe
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task1\Task5\obj\x86\Debug\Task5.pdb

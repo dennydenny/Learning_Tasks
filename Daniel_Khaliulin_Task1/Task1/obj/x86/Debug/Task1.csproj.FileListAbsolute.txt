@@ -1,0 +1,10 @@
+C:\Users\Administrator\AppData\Local\Temporary Projects\Task1\bin\Debug\Task1.exe
+C:\Users\Administrator\AppData\Local\Temporary Projects\Task1\bin\Debug\Task1.pdb
+C:\Users\Administrator\AppData\Local\Temporary Projects\Task1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\AppData\Local\Temporary Projects\Task1\obj\x86\Debug\Task1.exe
+C:\Users\Administrator\AppData\Local\Temporary Projects\Task1\obj\x86\Debug\Task1.pdb
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task1\Task1\obj\x86\Debug\Task1.exe
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task1\Task1\obj\x86\Debug\Task1.pdb
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task1\Task1\bin\Debug\Task1.exe
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task1\Task1\bin\Debug\Task1.pdb
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task1\Task1\obj\x86\Debug\Task1.csprojResolveAssemblyReference.cache
