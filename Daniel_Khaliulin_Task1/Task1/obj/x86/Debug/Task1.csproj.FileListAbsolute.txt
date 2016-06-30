@@ -8,3 +8,5 @@ C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task1\Task1\obj\x86
 C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task1\Task1\bin\Debug\Task1.exe
 C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task1\Task1\bin\Debug\Task1.pdb
 C:\Users\Administrator\Documents\Visual Studio 2010\Projects\Task1\Task1\obj\x86\Debug\Task1.csprojResolveAssemblyReference.cache
+C:\Develop\master\Daniel_Khaliulin_Task1\Task1\obj\x86\Debug\Task1.exe
+C:\Develop\master\Daniel_Khaliulin_Task1\Task1\obj\x86\Debug\Task1.pdb
