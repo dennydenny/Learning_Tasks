@@ -1,0 +1,4 @@
+C:\Develop\master\Daniel_Khaliulin_OOP\Task5\bin\Debug\Task5.exe
+C:\Develop\master\Daniel_Khaliulin_OOP\Task5\bin\Debug\Task5.pdb
+C:\Develop\master\Daniel_Khaliulin_OOP\Task5\obj\x86\Debug\Task5.exe
+C:\Develop\master\Daniel_Khaliulin_OOP\Task5\obj\x86\Debug\Task5.pdb

@@ -1,0 +1,4 @@
+C:\Develop\master\Daniel_Khaliulin_OOP\Task2\bin\Release\Task2.exe
+C:\Develop\master\Daniel_Khaliulin_OOP\Task2\bin\Release\Task2.pdb
+C:\Develop\master\Daniel_Khaliulin_OOP\Task2\obj\x86\Release\Task2.exe
+C:\Develop\master\Daniel_Khaliulin_OOP\Task2\obj\x86\Release\Task2.pdb

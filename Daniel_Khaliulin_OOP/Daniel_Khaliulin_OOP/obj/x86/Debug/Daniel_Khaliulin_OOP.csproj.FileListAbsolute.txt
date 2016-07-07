@@ -1,0 +1,4 @@
+C:\Develop\master\Daniel_Khaliulin_OOP\Daniel_Khaliulin_OOP\bin\Debug\Daniel_Khaliulin_OOP.exe
+C:\Develop\master\Daniel_Khaliulin_OOP\Daniel_Khaliulin_OOP\bin\Debug\Daniel_Khaliulin_OOP.pdb
+C:\Develop\master\Daniel_Khaliulin_OOP\Daniel_Khaliulin_OOP\obj\x86\Debug\Daniel_Khaliulin_OOP.exe
+C:\Develop\master\Daniel_Khaliulin_OOP\Daniel_Khaliulin_OOP\obj\x86\Debug\Daniel_Khaliulin_OOP.pdb

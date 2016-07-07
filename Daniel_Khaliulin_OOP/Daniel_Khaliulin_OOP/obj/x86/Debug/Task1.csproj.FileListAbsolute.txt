@@ -1,0 +1,6 @@
+C:\Users\Administrator\AppData\Local\Temporary Projects\Daniel_Khaliulin_Task3\bin\Debug\Daniel_Khaliulin_Task3.exe
+C:\Users\Administrator\AppData\Local\Temporary Projects\Daniel_Khaliulin_Task3\bin\Debug\Daniel_Khaliulin_Task3.pdb
+C:\Users\Administrator\AppData\Local\Temporary Projects\Daniel_Khaliulin_Task3\obj\x86\Debug\Daniel_Khaliulin_Task3.exe
+C:\Users\Administrator\AppData\Local\Temporary Projects\Daniel_Khaliulin_Task3\obj\x86\Debug\Daniel_Khaliulin_Task3.pdb
+C:\Develop\master\Daniel_Khaliulin_OOP\Daniel_Khaliulin_OOP\obj\x86\Debug\Daniel_Khaliulin_OOP.exe
+C:\Develop\master\Daniel_Khaliulin_OOP\Daniel_Khaliulin_OOP\obj\x86\Debug\Daniel_Khaliulin_OOP.pdb
