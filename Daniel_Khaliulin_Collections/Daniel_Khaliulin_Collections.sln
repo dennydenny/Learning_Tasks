@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1", "Daniel_Khaliulin_Collections\Task1.csproj", "{AE790AE0-90CF-4426-9C89-C3FC332AEF49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2", "Task2\Task2.csproj", "{FCA4902B-0CB7-4514-832D-B1D2B5CF9FCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3", "Task3\Task3.csproj", "{A61D1FEC-BD51-4127-B8BD-B42E84AE58C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE790AE0-90CF-4426-9C89-C3FC332AEF49}.Debug|x86.ActiveCfg = Debug|x86
+		{AE790AE0-90CF-4426-9C89-C3FC332AEF49}.Debug|x86.Build.0 = Debug|x86
+		{AE790AE0-90CF-4426-9C89-C3FC332AEF49}.Release|x86.ActiveCfg = Release|x86
+		{AE790AE0-90CF-4426-9C89-C3FC332AEF49}.Release|x86.Build.0 = Release|x86
+		{FCA4902B-0CB7-4514-832D-B1D2B5CF9FCD}.Debug|x86.ActiveCfg = Debug|x86
+		{FCA4902B-0CB7-4514-832D-B1D2B5CF9FCD}.Debug|x86.Build.0 = Debug|x86
+		{FCA4902B-0CB7-4514-832D-B1D2B5CF9FCD}.Release|x86.ActiveCfg = Release|x86
+		{FCA4902B-0CB7-4514-832D-B1D2B5CF9FCD}.Release|x86.Build.0 = Release|x86
+		{A61D1FEC-BD51-4127-B8BD-B42E84AE58C1}.Debug|x86.ActiveCfg = Debug|x86
+		{A61D1FEC-BD51-4127-B8BD-B42E84AE58C1}.Debug|x86.Build.0 = Debug|x86
+		{A61D1FEC-BD51-4127-B8BD-B42E84AE58C1}.Release|x86.ActiveCfg = Release|x86
+		{A61D1FEC-BD51-4127-B8BD-B42E84AE58C1}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

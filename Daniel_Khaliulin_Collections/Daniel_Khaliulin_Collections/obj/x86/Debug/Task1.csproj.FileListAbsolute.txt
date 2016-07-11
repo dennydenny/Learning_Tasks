@@ -1,0 +1,4 @@
+C:\Develop\master\Daniel_Khaliulin_Collections\Daniel_Khaliulin_Collections\bin\Debug\Daniel_Khaliulin_Collections.exe
+C:\Develop\master\Daniel_Khaliulin_Collections\Daniel_Khaliulin_Collections\bin\Debug\Daniel_Khaliulin_Collections.pdb
+C:\Develop\master\Daniel_Khaliulin_Collections\Daniel_Khaliulin_Collections\obj\x86\Debug\Daniel_Khaliulin_Collections.exe
+C:\Develop\master\Daniel_Khaliulin_Collections\Daniel_Khaliulin_Collections\obj\x86\Debug\Daniel_Khaliulin_Collections.pdb
