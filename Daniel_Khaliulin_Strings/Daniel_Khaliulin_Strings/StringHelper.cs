@@ -9,11 +9,18 @@ namespace Daniel_Khaliulin_Strings
     {
         private String _sentence;
         private int _averageWordLenght;
+        /// <summary>
+        /// Средняя длина слова в предложении.
+        /// </summary>
         public int AverageWordLenght {
             get {return CalculateAverageWordLenght();}
             private set { _averageWordLenght = value; }
         }
 
+        /// <summary>
+        /// Инициализирует новый экземпляр StringHelper с текстом.
+        /// </summary>
+        /// <param name="text">Текст, в котором необходимо осуществить расчёт средней длины слова.</param>
         public StringHelper(String text)
         {
             if (String.IsNullOrEmpty(text))
