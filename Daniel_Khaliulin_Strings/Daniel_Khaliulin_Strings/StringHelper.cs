@@ -8,13 +8,12 @@ namespace Daniel_Khaliulin_Strings
     class StringHelper
     {
         private String _sentence;
-        private int _averageWordLenght;
+
         /// <summary>
         /// Средняя длина слова в предложении.
         /// </summary>
         public int AverageWordLenght {
             get {return CalculateAverageWordLenght();}
-            private set { _averageWordLenght = value; }
         }
 
         /// <summary>
@@ -25,7 +24,7 @@ namespace Daniel_Khaliulin_Strings
         {
             if (String.IsNullOrEmpty(text))
             {
-                throw new ArgumentNullException("Text null or empty");
+                throw new ArgumentNullException();
             }
             else
             {
@@ -41,15 +40,13 @@ namespace Daniel_Khaliulin_Strings
                 int sentenseLenght = 0;
                 foreach (String s in words)
                 {
-                    Console.WriteLine(s);
                     sentenseLenght += s.Length;
                 }
-                Console.WriteLine("sentenseLenght - {0} words.Length - {1}", sentenseLenght, words.Length);
-                return AverageWordLenght = sentenseLenght / words.Length; ;
+                return sentenseLenght / words.Length; ;
             }
             else 
             {
-                throw new ArgumentNullException("Text null or empty");
+                throw new ArgumentNullException();
             }
         }
     }

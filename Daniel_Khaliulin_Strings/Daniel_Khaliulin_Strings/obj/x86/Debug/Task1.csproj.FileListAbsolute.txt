@@ -1,0 +1,4 @@
+C:\Develop\master\Daniel_Khaliulin_Strings\Daniel_Khaliulin_Strings\bin\Debug\Daniel_Khaliulin_Strings.exe
+C:\Develop\master\Daniel_Khaliulin_Strings\Daniel_Khaliulin_Strings\bin\Debug\Daniel_Khaliulin_Strings.pdb
+C:\Develop\master\Daniel_Khaliulin_Strings\Daniel_Khaliulin_Strings\obj\x86\Debug\Daniel_Khaliulin_Strings.exe
+C:\Develop\master\Daniel_Khaliulin_Strings\Daniel_Khaliulin_Strings\obj\x86\Debug\Daniel_Khaliulin_Strings.pdb
