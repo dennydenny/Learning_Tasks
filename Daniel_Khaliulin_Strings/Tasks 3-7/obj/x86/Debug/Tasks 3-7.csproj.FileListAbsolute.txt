@@ -1,0 +1,4 @@
+C:\Develop\master\Daniel_Khaliulin_Strings\Tasks 3-7\bin\Debug\Tasks 3-7.exe
+C:\Develop\master\Daniel_Khaliulin_Strings\Tasks 3-7\bin\Debug\Tasks 3-7.pdb
+C:\Develop\master\Daniel_Khaliulin_Strings\Tasks 3-7\obj\x86\Debug\Tasks 3-7.exe
+C:\Develop\master\Daniel_Khaliulin_Strings\Tasks 3-7\obj\x86\Debug\Tasks 3-7.pdb

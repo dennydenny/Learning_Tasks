@@ -41,6 +41,10 @@ namespace Task2
         /// Вторая строка (на основе ей будет осуществляться поиск в первой строке).
         /// </summary>
         public String SecondString { get; private set; }
+
+        /// <summary>
+        /// Смешанная строка, которая получается путём удваивания символов первой строки, которые входят во вторую.
+        /// </summary>
         public String MergedString { get {return this.MergeStrings();}}
 
         /// <summary>
@@ -63,13 +67,15 @@ namespace Task2
                 this.FirstString = first;
                 this.SecondString = second;
             }
-
         }
 
+        /// <summary>
+        /// Метод осуществляет поиск символов второй строки в первой строке и удваивает найденные символы.
+        /// </summary>
+        /// <returns>Строка, в которой удвоены символы, которые присутствуют в первой и во второй строках.</returns>
         private String MergeStrings()
         {
             StringBuilder sb = new StringBuilder();
-
 
             foreach (char ch in FirstString)
                 if (!SecondString.Contains(ch))
@@ -79,26 +85,6 @@ namespace Task2
                     sb.Append(ch);
                     sb.Append(ch);
                 }
-            /*
-            for (int i = 0; i < FirstString.Length; i++)
-            {
-                if (!FirstString.Trim()[i].Equals(""))
-                {
-                    sb.Append(FirstString[i]);
-
-                    for (int k = 0; k < SecondString.Length; k++)
-                    {
-                        if (FirstString[i].Equals(SecondString[k]))
-                        {
-                            sb.Append(FirstString[i]);
-                        }
-                    }
-                }
-
-                else {
-                    sb.Append(" ");
-                }
-            }*/
             return sb.ToString();
         }
     
