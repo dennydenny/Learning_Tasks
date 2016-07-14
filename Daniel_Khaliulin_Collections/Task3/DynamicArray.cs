@@ -9,14 +9,18 @@ namespace Task3
     {
         private int _defaultCapacity = 8;
         private T [] _dynamicArray;
-        private int _capacity;
-        public int Capacity
+        public int Capacity { get; set; }
+
+        public int Lenght
         {
-            get {
-                return _capacity;
-            }
-            private set {
-                _capacity = value;
+            get
+            {
+                int _count = 0;
+                foreach (object o in _dynamicArray)
+                {
+                    _count++;
+                }
+                return _count;
             }
         }
 
@@ -25,19 +29,17 @@ namespace Task3
         /// </summary>
         public DynamicArray() {
             _dynamicArray = new T [_defaultCapacity];
-            Capacity = _defaultCapacity;
         }
 
         /// <summary>
         /// Constructor with one parameter (capacity).
         /// </summary>
-        /// <param name="n"></param>
+        /// <param name="n">Capacity of array.</param>
         public DynamicArray(int n)
         {
             if (n > 0)
             {
                 _dynamicArray = new T [n];
-                Capacity = n;
             }
             else
             {
@@ -46,49 +48,100 @@ namespace Task3
         }
 
         /// <summary>
-        /// Copy elements from input collection to array.
+        /// Constructor that create array with input collections items.
         /// </summary>
-        /// <param name="collection"></param>
+        /// <param name="collection">Input collection (IEnumerable<T>).</param>
         public DynamicArray(IEnumerable<T> collection)
         {
             // Calculating count of elements.
-            int _count = 0;
-            foreach (object o in collection)
-            {
-                _count++;
-            }
+            int _count = collection.Count();
 
             _dynamicArray = new T[_count];
 
             // Coping values from collection to array.
             _count = 0;
-            foreach (T value in collection)
+
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            for (int i = 0; i < _count; i++)
             {
-                _dynamicArray[_count] = value;
+                enumerator.MoveNext();
+                this._dynamicArray[i] = enumerator.Current;
             }
         }
 
+
+        /// <summary>
+        /// Add element to last index in array.
+        /// </summary>
+        /// <param name="element">Element.</param>
         public void Add(T element)
         {
-            if (Capacity >= Lenght)
+            if ((Lenght + 1) >= Capacity)
             {
-
+                Resize();
+                _dynamicArray[this.Lenght + 1] = element;
             }
             else
             {
-                Capacity = Capacity * 2;
-                // TODO: complete other exercises of this task 
+                _dynamicArray[this.Lenght + 1] = element;
             }
         }
 
 
-        public int Lenght 
+        public void AddRange(IEnumerable<T> collection)
         {
-            get
+            // Calculating count of elements.
+            int _count = collection.Count();
+            if (Lenght + _count >= Capacity)
             {
-                return _dynamicArray.Length;
+                Resize(Lenght + _count + 1);
+            }
+            
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            int i = Lenght;
+            while (enumerator.MoveNext())
+            {
+                _dynamicArray[i] = enumerator.Current;
+                i++;
+            }
+            
+
+
+
+
+        }
+
+
+        /// <summary>
+        /// Increases the capasity of array.
+        /// </summary>
+        public void Resize()
+        {
+            T[] temp = new T[Capacity * 2];
+            _dynamicArray.CopyTo(temp, 0);
+            _dynamicArray = temp;
+        }
+
+        /// <summary>
+        /// Changes the capasity of array to n items.
+        /// </summary>
+        /// <param name="n">New capacity of array.</param>
+        public void Resize(int n)
+        {
+            // Check is n less then current capacity.
+            if (n < Capacity)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            else
+            {
+                T[] temp = new T[n];
+                _dynamicArray.CopyTo(temp, 0);
+                _dynamicArray = temp;
             }
         }
+
+        //TODO: Complete other tasks. 
 
     }
 }
