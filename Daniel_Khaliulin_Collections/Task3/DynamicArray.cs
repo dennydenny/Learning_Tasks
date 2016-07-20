@@ -6,23 +6,29 @@ using System.Collections;
 
 namespace Task3
 {
-    class DynamicArray<T> : IEnumerable<T>, IEnumerator<T>, IEnumerable, IEnumerator
+    class DynamicArray<T> : IEnumerable<T>, IEnumerator<T>
     {
         private int _defaultCapacity = 8;
         private T [] _dynamicArray;
         private int _index = 0;
-        public int Capacity { get; set; }
+        public int Capacity 
+        { 
+            get
+            {
+            int _capacity = 0;
+                foreach (object o in _dynamicArray)
+                {
+                    _capacity++;
+                }
+                return _capacity;
+            } 
+        }
 
         public int Length
         {
             get
             {
-                int _count = 0;
-                foreach (object o in _dynamicArray)
-                {
-                    _count++;
-                }
-                return _count;
+                return _dynamicArray.Length;
             }
         }
 
