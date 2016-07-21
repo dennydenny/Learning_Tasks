@@ -1,0 +1,4 @@
+C:\Users\Administrator\AppData\Local\Temporary Projects\LINQ_XML\bin\Debug\LINQ_XML.exe
+C:\Users\Administrator\AppData\Local\Temporary Projects\LINQ_XML\bin\Debug\LINQ_XML.pdb
+C:\Users\Administrator\AppData\Local\Temporary Projects\LINQ_XML\obj\x86\Debug\LINQ_XML.exe
+C:\Users\Administrator\AppData\Local\Temporary Projects\LINQ_XML\obj\x86\Debug\LINQ_XML.pdb

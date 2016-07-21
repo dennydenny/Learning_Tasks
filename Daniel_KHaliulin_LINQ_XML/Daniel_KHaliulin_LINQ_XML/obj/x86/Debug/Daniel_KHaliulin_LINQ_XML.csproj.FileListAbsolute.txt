@@ -1,0 +1,5 @@
+C:\Develop\master\Daniel_KHaliulin_LINQ_XML\Daniel_KHaliulin_LINQ_XML\bin\Debug\input.txt
+C:\Develop\master\Daniel_KHaliulin_LINQ_XML\Daniel_KHaliulin_LINQ_XML\bin\Debug\Daniel_KHaliulin_LINQ_XML.exe
+C:\Develop\master\Daniel_KHaliulin_LINQ_XML\Daniel_KHaliulin_LINQ_XML\bin\Debug\Daniel_KHaliulin_LINQ_XML.pdb
+C:\Develop\master\Daniel_KHaliulin_LINQ_XML\Daniel_KHaliulin_LINQ_XML\obj\x86\Debug\Daniel_KHaliulin_LINQ_XML.exe
+C:\Develop\master\Daniel_KHaliulin_LINQ_XML\Daniel_KHaliulin_LINQ_XML\obj\x86\Debug\Daniel_KHaliulin_LINQ_XML.pdb
