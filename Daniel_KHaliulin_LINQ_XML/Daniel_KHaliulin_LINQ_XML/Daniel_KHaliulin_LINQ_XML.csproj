@@ -44,9 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
-    <Compile Include="FileHelper.cs" />
+    <Compile Include="ClientFilter.cs" />
+    <Compile Include="ClientNotFoundException.cs" />
+    <Compile Include="ClientParser.cs" />
+    <Compile Include="FileReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="input.txt">
