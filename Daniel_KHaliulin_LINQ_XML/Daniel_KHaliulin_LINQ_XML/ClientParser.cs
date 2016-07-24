@@ -42,6 +42,11 @@ namespace LINQ_XML
                     Match clientMatch = clientRegex.Match(item);
                     clients.Add(new Client(clientMatch.Groups[0].Value, bank.ToString()));
                 }
+
+                if (clients.Count == 0)
+                {
+                    throw new EmptyClientsListException("Не удалось распознать ни одного клиента");
+                }
             }
             return clients;
         }
