@@ -1,0 +1,5 @@
+C:\Developer\C#\master\Daniel_Khaliulin_Architecture task\Daniel_Khaliulin_Architecture task\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Developer\C#\master\Daniel_Khaliulin_Architecture task\Daniel_Khaliulin_Architecture task\bin\Debug\Daniel_Khaliulin_Architecture task.exe
+C:\Developer\C#\master\Daniel_Khaliulin_Architecture task\Daniel_Khaliulin_Architecture task\bin\Debug\Daniel_Khaliulin_Architecture task.pdb
+C:\Developer\C#\master\Daniel_Khaliulin_Architecture task\Daniel_Khaliulin_Architecture task\obj\x86\Debug\Daniel_Khaliulin_Architecture task.exe
+C:\Developer\C#\master\Daniel_Khaliulin_Architecture task\Daniel_Khaliulin_Architecture task\obj\x86\Debug\Daniel_Khaliulin_Architecture task.pdb

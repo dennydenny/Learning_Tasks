@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Daniel_Khaliulin_Architecture task", "Daniel_Khaliulin_Architecture task\Daniel_Khaliulin_Architecture task.csproj", "{31FB3A6F-6E0B-4F66-B8F6-13C901E1B3E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31FB3A6F-6E0B-4F66-B8F6-13C901E1B3E8}.Debug|x86.ActiveCfg = Debug|x86
+		{31FB3A6F-6E0B-4F66-B8F6-13C901E1B3E8}.Debug|x86.Build.0 = Debug|x86
+		{31FB3A6F-6E0B-4F66-B8F6-13C901E1B3E8}.Release|x86.ActiveCfg = Release|x86
+		{31FB3A6F-6E0B-4F66-B8F6-13C901E1B3E8}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
