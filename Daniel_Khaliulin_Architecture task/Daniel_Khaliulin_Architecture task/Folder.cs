@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Daniel_Khaliulin_Architecture_task
 {
-    class Folder : Node
+    public class Folder : Node
     {
         public ICollection<Node> Content;
         public Folder Parent { get; private set; }
@@ -21,6 +21,10 @@ namespace Daniel_Khaliulin_Architecture_task
             this.Name = name;
             this.Parent = parent;
             Content = new List<Node>();
+        }
+
+        public Folder()
+        {
         }
     }
 }

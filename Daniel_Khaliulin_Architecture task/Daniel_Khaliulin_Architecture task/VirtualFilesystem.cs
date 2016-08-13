@@ -40,13 +40,29 @@ namespace Daniel_Khaliulin_Architecture_task
                 throw new Exception("\nНеверно указан корневой каталог.");
             }
 
-            Node current = root.Content.Single(f => f.Name == foldersInPath[1]);
+            Node first;
 
+            // Осуществляем поиск первого узла, указанного после корня ([0] - всегда корень).
+            try
+            {
+                first = root.Content.Single(n => n.Name == foldersInPath[1]);
+            }
+            // Выброс этого исключения означает, что первого узла, указанного после корня не существует.
+            catch (System.InvalidOperationException)
+            {
+                throw new Exception ("\nУказанного пути не существует");
+            }
+
+            Folder temp = new Folder();
+
+            while (temp.Content != null)
+            {
+            }
 
             for (int i = 1; i < foldersInPath.Count() - 1; i++)
             {
-               
-
+                //InvalidCastException
+                //Folder current = (Folder)first;
             }
 
         }

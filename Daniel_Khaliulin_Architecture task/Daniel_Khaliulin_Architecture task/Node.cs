@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Daniel_Khaliulin_Architecture_task
 {
-    abstract class Node
+    public abstract class Node
     {
         // Сделать set приватным???
         public String Name { get;  set; }
