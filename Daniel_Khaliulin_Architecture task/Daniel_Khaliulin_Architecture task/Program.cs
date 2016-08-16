@@ -21,14 +21,12 @@ namespace Daniel_Khaliulin_Architecture_task
                 try
                 {
                     // Осуществляем проверку данных.
-                    Console.WriteLine(inputArgs.Count());
                     CheckInputParameters(inputArgs);
 
                     switch (inputArgs[0])
                     {
                         case ("mkdir"):
-
-                            //VirtualFilesystem.Create(inputArgs[1], 1);
+                            vfs.Create(inputArgs[1], 1);
                             break;
                         case ("mkfile"):
                             break;
@@ -39,6 +37,7 @@ namespace Daniel_Khaliulin_Architecture_task
                         case ("remove"):
                             break;
                         case ("tree"):
+                            vfs.GetTree();
                             break;
                         default:
                             break;

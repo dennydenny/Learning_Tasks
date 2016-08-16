@@ -9,5 +9,6 @@ namespace Daniel_Khaliulin_Architecture_task
     {
         // Сделать set приватным???
         public String Name { get;  set; }
+        public Folder Parent { get; set; }
     }
 }

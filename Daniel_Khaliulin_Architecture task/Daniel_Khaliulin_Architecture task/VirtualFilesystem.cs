@@ -19,14 +19,14 @@ namespace Daniel_Khaliulin_Architecture_task
                 _root = value;
             }
         }
-
+        
         public VirtualFilesystem()
         {
             root = new Folder("root", null);
         }
 
         /// <summary>
-        /// Метод, создающий экземпляры узла файловой системы.
+        /// Метод, создающий экземпляры узла файловой системы (файлы и папки).
         /// </summary>
         /// <param name="path">Путь, в котором необходимо создать узел.</param>
         /// <param name="type">Тип узла (0 - файл, 1 - папка).</param>
@@ -39,32 +39,62 @@ namespace Daniel_Khaliulin_Architecture_task
             {
                 throw new Exception("\nНеверно указан корневой каталог.");
             }
+            Folder temp = root;
 
-            Node first;
-
-            // Осуществляем поиск первого узла, указанного после корня ([0] - всегда корень).
-            try
+            for (int i = 1; i < foldersInPath.Count(); i++)
             {
-                first = root.Content.Single(n => n.Name == foldersInPath[1]);
+                try
+                {
+                    if (i == (foldersInPath.Count() - 1))
+                    {
+                        temp.Content.Add(new Folder(foldersInPath[i], temp));
+                    }
+                    
+                    temp = temp.Content.Single(n => n.Name == foldersInPath[i]) as Folder;
+                }
+                catch (InvalidOperationException)
+                {
+                    throw new Exception("\nВведённый путь не недействителен.");
+                }
             }
-            // Выброс этого исключения означает, что первого узла, указанного после корня не существует.
-            catch (System.InvalidOperationException)
+        }
+
+        public void GetTree()
+        {
+            Folder tree = root;
+            List<Node> firstStack = new List<Node>();
+            firstStack.Add(tree);
+
+            List<List<Node>> childListStack = new List<List<Node>>();
+            childListStack.Add(firstStack);
+
+            while (childListStack.Count > 0)
             {
-                throw new Exception ("\nУказанного пути не существует");
+                List<Node> childStack = childListStack[childListStack.Count - 1];
+
+                if (childStack.Count == 0)
+                {
+                    childListStack.RemoveAt(childListStack.Count - 1);
+                }
+                else
+                {
+                    tree = childStack[0] as Folder;
+                    childStack.RemoveAt(0);
+
+                    string indent = "";
+                    for (int i = 0; i < childListStack.Count - 1; i++)
+                    {
+                        indent += (childListStack[i].Count > 0) ? "|  " : "   ";
+                    }
+
+                    Console.WriteLine(indent + "+- " + tree.Name);
+
+                    if (tree.Content.Count > 0)
+                    {
+                        childListStack.Add(new List<Node>(tree.Content));
+                    }
+                }
             }
-
-            Folder temp = new Folder();
-
-            while (temp.Content != null)
-            {
-            }
-
-            for (int i = 1; i < foldersInPath.Count() - 1; i++)
-            {
-                //InvalidCastException
-                //Folder current = (Folder)first;
-            }
-
         }
     }
 }

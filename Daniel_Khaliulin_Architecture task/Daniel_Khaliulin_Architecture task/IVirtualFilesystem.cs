@@ -35,11 +35,11 @@ namespace Daniel_Khaliulin_Architecture_task
         /// </summary>
         /// <param name="path">Путь к узлу, который необходимо удалить.</param>
         void Remove(String path);
-
+        */
         /// <summary>
         /// Возвращает древо каталогов файловой системы.
         /// </summary>
         void GetTree();
-         */ 
+          
     }
 }
