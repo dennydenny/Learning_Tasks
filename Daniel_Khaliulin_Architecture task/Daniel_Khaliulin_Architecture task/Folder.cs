@@ -26,8 +26,7 @@ namespace Daniel_Khaliulin_Architecture_task
         public Folder()
         {
         }   
-
-
+        
         private IList<Node> Select(IEnumerable<Node> source, Func<Node, bool> predicate)
         {
             var res = new List<Node>();

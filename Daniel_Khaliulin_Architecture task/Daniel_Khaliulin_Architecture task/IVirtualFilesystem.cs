@@ -8,11 +8,9 @@ namespace Daniel_Khaliulin_Architecture_task
     interface IVirtualFilesystem
     {
         /// <summary>
-        /// Метод, создающий экземпляры узла файловой системы.
+        /// Метод, создающий экземпляры папки в файловой системе.
         /// </summary>
-        /// <param name="path">Путь, в котором необходимо создать узел.</param>
-        /// <param name="type">Тип узла (0 - файл, 1 - папка).</param>
-        void Create (String path, int type);
+        void CreateFolder (String path);
 
         // Следующие методы интерфейса закомментированы в целях более удобной отладки. Чтобы студия не регалась, на то, что в ребёнки они не реализованы.
         /*

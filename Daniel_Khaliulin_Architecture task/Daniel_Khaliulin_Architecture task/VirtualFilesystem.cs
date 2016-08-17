@@ -26,11 +26,9 @@ namespace Daniel_Khaliulin_Architecture_task
         }
 
         /// <summary>
-        /// Метод, создающий экземпляры узла файловой системы (файлы и папки).
+        /// Метод, создающий экземпляры папки в файловой системе.
         /// </summary>
-        /// <param name="path">Путь, в котором необходимо создать узел.</param>
-        /// <param name="type">Тип узла (0 - файл, 1 - папка).</param>
-        public void Create(String path, int type)
+        public void CreateFolder(String path)
         {
             String[] foldersInPath = path.Split('\\');
 
@@ -51,6 +49,39 @@ namespace Daniel_Khaliulin_Architecture_task
                     }
                     
                     temp = temp.Content.Single(n => n.Name == foldersInPath[i]) as Folder;
+                }
+                catch (InvalidOperationException)
+                {
+                    throw new Exception("\nВведённый путь не недействителен.");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Метод, создающий файл в файловой системе.
+        /// </summary>
+        /// <param name="path">Путь с указанием файла, в котором необходимо создать файл.</param>
+        public void CreateFile(String path)
+        {
+            String[] itemsInPath = path.Split('\\');
+
+            // Проверяем, что первым элементом является корень.
+            if (!itemsInPath[0].Equals("root"))
+            {
+                throw new Exception("\nНеверно указан корневой каталог.");
+            }
+            Folder temp = root;
+
+            for (int i = 1; i < itemsInPath.Count(); i++)
+            {
+                try
+                {
+                    if (i == (itemsInPath.Count() - 1))
+                    {
+                        temp.Content.Add(new File(itemsInPath[i], temp));
+                    }
+
+                    temp = temp.Content.Single(n => n.Name == itemsInPath[i]) as Folder;
                 }
                 catch (InvalidOperationException)
                 {

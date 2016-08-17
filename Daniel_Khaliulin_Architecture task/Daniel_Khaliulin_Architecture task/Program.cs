@@ -26,7 +26,7 @@ namespace Daniel_Khaliulin_Architecture_task
                     switch (inputArgs[0])
                     {
                         case ("mkdir"):
-                            vfs.Create(inputArgs[1], 1);
+                            vfs.CreateFolder(inputArgs[1]);
                             break;
                         case ("mkfile"):
                             break;
@@ -41,7 +41,6 @@ namespace Daniel_Khaliulin_Architecture_task
                             break;
                         default:
                             break;
-
                     }
                 }
                 catch (Exception e)
