@@ -29,6 +29,7 @@ namespace Daniel_Khaliulin_Architecture_task
                             vfs.CreateFolder(inputArgs[1]);
                             break;
                         case ("mkfile"):
+                            vfs.CreateFile(inputArgs[1]);
                             break;
                         case ("copy"):
                             break;
