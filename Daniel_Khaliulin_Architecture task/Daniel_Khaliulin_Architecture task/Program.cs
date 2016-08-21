@@ -32,8 +32,10 @@ namespace Daniel_Khaliulin_Architecture_task
                             vfs.CreateFile(inputArgs[1]);
                             break;
                         case ("copy"):
+                            vfs.Copy(inputArgs[1], inputArgs[2]);
                             break;
                         case ("move"):
+                            vfs.Move(inputArgs[1], inputArgs[2]);
                             break;
                         case ("remove"):
                             break;

@@ -31,7 +31,7 @@ namespace Daniel_Khaliulin_Architecture_task
         public void CreateFolder (String path)
         {
             String[] itemsInPath = path.Split('\\');
-            Folder temp = GoToFolder(itemsInPath);
+            Folder temp = GoToFolder(itemsInPath, true);
             temp.Content.Add(new Folder(itemsInPath[itemsInPath.Count() - 1], temp));
         }
 
@@ -42,17 +42,43 @@ namespace Daniel_Khaliulin_Architecture_task
         public void CreateFile (String path)
         {
             String[] itemsInPath = path.Split('\\');
-            Folder temp = GoToFolder(itemsInPath);
+            Folder temp = GoToFolder(itemsInPath, true);
             temp.Content.Add(new File(itemsInPath[itemsInPath.Count() - 1], temp));
         }
 
-        public void Copy(String from, String to)
+        /// <summary>
+        /// Метод, осуществляющий копирование элементов FS между папками.
+        /// </summary>
+        /// <param name="pathFrom">Путь-источник с указанием узла, который необходимо скопировать.</param>
+        /// <param name="pathTo">Целевой путь, в который необходимо осуществить копирование.</param>
+        public void Copy(String pathFrom, String pathTo)
         {
-            /*
-             * 1. Проверяем существует ли элемент для копирования (последний в входном пути)
-             * 2. Проверяем существует ли путь назначения.
-             * 3. Делаем рекурсивный...TBD
-             */
+            String[] itemsInFromPath = pathFrom.Split('\\');
+            Folder sourceFolder = GoToFolder(itemsInFromPath, true);
+            Node targetNode = sourceFolder.Content.Single(n => n.Name == itemsInFromPath[itemsInFromPath.Count() - 1]);
+
+            String[] itemsInToPath = pathTo.Split('\\');
+            Folder destinationFolder = GoToFolder(itemsInToPath, false);
+            destinationFolder.Content.Add(targetNode);
+        }
+
+        /// <summary>
+        /// Метод, осуществляющий перемещение элементов FS между папками.
+        /// </summary>
+        /// <param name="pathFrom">Путь-источник с указанием узла, который необходимо переместить.</param>
+        /// <param name="pathTo">Целевой путь, в который необходимо осуществить перемещение.</param>
+        public void Move(String pathFrom, String pathTo)
+        {
+            String[] itemsInFromPath = pathFrom.Split('\\');
+            Folder sourceFolder = GoToFolder(itemsInFromPath, true);
+            Node targetNode = sourceFolder.Content.Single(n => n.Name == itemsInFromPath[itemsInFromPath.Count() - 1]);
+
+            String[] itemsInToPath = pathTo.Split('\\');
+            Folder destinationFolder = GoToFolder(itemsInToPath, false);
+            destinationFolder.Content.Add(targetNode);
+
+            // Удаляем элемент из папки-источника.
+            sourceFolder.Content.Remove(targetNode);
         }
 
         /// <summary>
@@ -105,9 +131,10 @@ namespace Daniel_Khaliulin_Architecture_task
         /// <summary>
         /// Метод, осуществляющий "переход" к папке, указанной в входном пути.
         /// </summary>
-        /// <param name="itemsInPath">Набор элементов файловой системы, по которым необходимо пройтись, чтобы достигнуть целевой папки (предпоследний элемент массива).</param>
-        /// <returns>Ссылка на целевую папку.</returns>
-        private Folder GoToFolder(String[] itemsInPath)
+        /// <param name="itemsInPath">Набор элементов FS, которые необходимо "пройти", чтобы достигнуть целевой папки (предпоследний элемент массива).</param>
+        /// <param name="stopOnParent">Если истина, то "переход" будет осуществлен только до последней родительской папки. Иначе "переход" будет будет осуществлен на последний элемент.</param>
+        /// <returns></returns>
+        private Folder GoToFolder(String[] itemsInPath, bool stopOnParent)
         {
             // Проверяем, что первым элементом является корень.
             if (!itemsInPath[0].Equals("root"))
@@ -116,7 +143,11 @@ namespace Daniel_Khaliulin_Architecture_task
             }
             Folder temp = root;
 
-            for (int i = 1; i < itemsInPath.Count() - 1; i++)
+            // Если stopOnParent true, обход выполняется только до последней родительной папки. Иначе до последнего элемента в пути.
+            int k = 1;
+            if (!stopOnParent) k--;
+
+            for (int i = 1; i < itemsInPath.Count() - k; i++)
             {
                 try
                 {
@@ -126,6 +157,10 @@ namespace Daniel_Khaliulin_Architecture_task
                 catch (InvalidOperationException)
                 {
                     throw new Exception("\nВведённый путь не недействителен.");
+                }
+                catch (Exception e)
+                {
+                    throw new Exception("\nВозникла ошибка при обработке: " + e.Message);
                 }
             }
             return temp;

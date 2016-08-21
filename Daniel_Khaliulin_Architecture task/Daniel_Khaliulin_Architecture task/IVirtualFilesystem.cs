@@ -27,14 +27,14 @@ namespace Daniel_Khaliulin_Architecture_task
         /// <param name="to">Путь, в который нужно осуществить копирование.</param>
         void Copy(String from, String to);
 
-        /*
+        
         /// <summary>
         /// Метод, осуществляющий перемещение элементов из одного места в другое.
         /// </summary>
         /// <param name="from">Путь к узлу, который надо переместить.</param>
         /// <param name="to">Путь, в который нужно осуществить перемещение.</param>
         void Move(String from, String to);
-
+        /*
         /// <summary>
         /// Метод, осуществляющий удаление узла файловой системы.
         /// </summary>
