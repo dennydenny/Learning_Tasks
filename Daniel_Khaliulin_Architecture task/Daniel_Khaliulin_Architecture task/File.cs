@@ -9,9 +9,23 @@ namespace Daniel_Khaliulin_Architecture_task
     {
         public File(String name, Folder parent)
         {
-            // TODO: Проверка параметров.
-            this.Name = name;
-            this.Parent = parent;
+            if (name != null)
+            {
+                this.Name = name;
+            }
+            else
+            {
+                throw new ArgumentNullException("Имя файла не может быть пустым.");
+            }
+
+            if (parent != null)
+            {
+                this.Parent = parent;
+            }
+            else
+            {
+                throw new ArgumentNullException("Родительская папка не может быть null.");
+            }
         }
     }
 }

@@ -9,7 +9,6 @@ namespace Daniel_Khaliulin_Architecture_task
     {
         public ICollection<Node> Content;
 
-
         /// <summary>
         /// Конструктор, инициирующий экземпляр класса папки.
         /// </summary>
@@ -17,41 +16,51 @@ namespace Daniel_Khaliulin_Architecture_task
         /// <param name="parent">Ссылка на родительскую папку.</param>
         public Folder(String name, Folder parent)
         {
-            // TODO: проверки параметров.
-            this.Name = name;
-            this.Parent = parent;
+            if (name != null)
+            {
+                this.Name = name;
+            }
+            else
+            {
+                throw new ArgumentNullException("Имя папки не может быть пустым.");
+            }
+
+            // Исключение для папки root.
+            if (!this.Name.Equals("root"))
+            {
+                if (parent != null)
+                {
+                    this.Parent = parent;
+                }
+                else
+                {
+                    throw new ArgumentNullException("Родительская папка не может быть null.");
+                }
+            }
+            else
+            {
+                this.Parent = parent;
+            }
             Content = new List<Node>();
         }
 
-        public Folder()
+        /// <summary>
+        /// Метод, осуществляющий проверку, содержится ли элемент с входным именем в коллекции элементов папки.
+        /// </summary>
+        /// <param name="name">Имя искомого элемента.</param>
+        /// <returns>true, если искомый элемент существует в этой папки, иначе false.</returns>
+        public bool IsNodeExists(String name)
         {
-        }   
-        
-        private IList<Node> Select(IEnumerable<Node> source, Func<Node, bool> predicate)
-        {
-            var res = new List<Node>();
-            foreach (var treeITem in source)
+            if (String.IsNullOrEmpty(name)) throw new ArgumentNullException("Отсутствует имя для проверки");
+
+            if (this.Content.Any(n => n.Name == name))
             {
-                var folder = treeITem as Folder;
-                if (folder != null)
-                    res.AddRange(Select(folder.Content, predicate));
-
-                if (predicate(treeITem))
-                    res.Add(treeITem);
+                return true;
             }
-            return res;
+            else
+            {
+                return false;
+            }
         }
-
-        // внешняя обертка а-ля LINQ, работающая через предикат
-        public IList<Node> Select(Func<Node, bool> predicate)
-        {
-            return Select(this.Content, predicate);
-        }
-
-        /* http://ru.stackoverflow.com/questions/277683/linq-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D0%B2-%D0%BA%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8-%D0%BA%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B9
-         * var res = FolderItem.Select(x => x.Enabled);
-        // будет выведено 4 - количество вложенных элементов с Enabled == true 
-        Console.WriteLine(res.Count());
-         */
     }
 }

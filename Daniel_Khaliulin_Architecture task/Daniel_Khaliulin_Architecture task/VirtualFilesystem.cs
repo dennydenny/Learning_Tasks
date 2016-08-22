@@ -32,7 +32,17 @@ namespace Daniel_Khaliulin_Architecture_task
         {
             String[] itemsInPath = path.Split('\\');
             Folder temp = GoToFolder(itemsInPath, true);
-            temp.Content.Add(new Folder(itemsInPath[itemsInPath.Count() - 1], temp));
+            String name = itemsInPath[itemsInPath.Count() - 1];
+
+            // Проверка дубликатов.
+            if (!temp.IsNodeExists(name))
+            {
+                temp.Content.Add(new Folder(name, temp));
+            }
+            else
+            {
+                throw new Exception("Такой элемент уже существует в заданной папке. Пожалуйста, выберите другое имя");
+            }
         }
 
         /// <summary>
@@ -43,7 +53,17 @@ namespace Daniel_Khaliulin_Architecture_task
         {
             String[] itemsInPath = path.Split('\\');
             Folder temp = GoToFolder(itemsInPath, true);
-            temp.Content.Add(new File(itemsInPath[itemsInPath.Count() - 1], temp));
+            String name = itemsInPath[itemsInPath.Count() - 1];
+
+            // Проверка дубликатов.
+            if (!temp.IsNodeExists(name))
+            {
+                temp.Content.Add(new File(name, temp));
+            }
+            else
+            {
+                throw new Exception("Такой элемент уже существует в заданной папке. Пожалуйста, выберите другое имя");
+            }
         }
 
         /// <summary>
@@ -53,13 +73,24 @@ namespace Daniel_Khaliulin_Architecture_task
         /// <param name="pathTo">Целевой путь, в который необходимо осуществить копирование.</param>
         public void Copy(String pathFrom, String pathTo)
         {
+            // Получаем элемент, который необходимо скопировать.
             String[] itemsInFromPath = pathFrom.Split('\\');
             Folder sourceFolder = GoToFolder(itemsInFromPath, true);
             Node targetNode = sourceFolder.Content.Single(n => n.Name == itemsInFromPath[itemsInFromPath.Count() - 1]);
 
+            // Получаем папку назначения.
             String[] itemsInToPath = pathTo.Split('\\');
             Folder destinationFolder = GoToFolder(itemsInToPath, false);
-            destinationFolder.Content.Add(targetNode);
+
+            // Проверка дубликатов. 
+            if (!destinationFolder.IsNodeExists(targetNode.Name))
+            {
+                destinationFolder.Content.Add(targetNode);
+            }
+            else
+            {
+                throw new Exception("Такой элемент уже существует в заданной папке. Пожалуйста, выберите другое имя");
+            }
         }
 
         /// <summary>
@@ -75,10 +106,29 @@ namespace Daniel_Khaliulin_Architecture_task
 
             String[] itemsInToPath = pathTo.Split('\\');
             Folder destinationFolder = GoToFolder(itemsInToPath, false);
-            destinationFolder.Content.Add(targetNode);
 
-            // Удаляем элемент из папки-источника.
-            sourceFolder.Content.Remove(targetNode);
+            // Проверка дубликатов. 
+            if (!destinationFolder.IsNodeExists(targetNode.Name))
+            {
+                destinationFolder.Content.Add(targetNode);
+                sourceFolder.Content.Remove(targetNode);
+            }
+            else
+            {
+                throw new Exception("Такой элемент уже существует в заданной папке. Пожалуйста, выберите другое имя");
+            }
+        }
+
+        /// <summary>
+        /// Метод, осуществляющий удаление узла файловой системы.
+        /// </summary>
+        /// <param name="path">Путь, по которому необходио удалить узел.</param>
+        public void Remove(String path)
+        {
+            String[] itemsInPath = path.Split('\\');
+            Folder temp = GoToFolder(itemsInPath, true);
+            Node target = temp.Content.Single(n => n.Name == itemsInPath[itemsInPath.Count() - 1]);
+            temp.Content.Remove(target);
         }
 
         /// <summary>

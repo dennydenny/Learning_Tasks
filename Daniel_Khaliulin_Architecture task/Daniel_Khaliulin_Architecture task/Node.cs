@@ -7,8 +7,7 @@ namespace Daniel_Khaliulin_Architecture_task
 {
     public abstract class Node
     {
-        // Сделать set приватным???
-        public String Name { get;  set; }
-        public Folder Parent { get; set; }
+        public String Name { get;  protected set; }
+        public Folder Parent { get; protected set; }
     }
 }
