@@ -1,2 +1,2 @@
-# master
-yet another repository!
+# Learning_Tasks
+C# learning tasks.
