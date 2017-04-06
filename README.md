@@ -1,2 +1,2 @@
 # Learning_Tasks
-C# learning tasks.
+Учебные задачки в рамках обучения C#.
